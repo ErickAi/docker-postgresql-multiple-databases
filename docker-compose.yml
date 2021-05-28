@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  bspl:
+    container_name: "BSPL"
+    image: "postgres:latest"
+    volumes:
+      - ./pg-init-scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=${POSTGRES_BSPL_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_BSPL_PASSWORD}
+      - POSTGRES_MULTIPLE_DATABASES=${BSPL_DATABASES}
