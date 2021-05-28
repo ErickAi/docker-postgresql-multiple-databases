@@ -1,3 +1,7 @@
+##Start script from root "cmd"
+
+    cd C:\.projects\.my\docker-postgresql-multiple-databases && docker-compose up
+
 # Using multiple databases with the official PostgreSQL Docker image
 
 The [official recommendation](https://hub.docker.com/_/postgres/) for creating
